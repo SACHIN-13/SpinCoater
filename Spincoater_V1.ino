@@ -71,7 +71,6 @@ void setup() {
   pinMode(PIN_RED_BUTTON, INPUT_PULLUP);
   pinMode(PIN_GRN_BUTTON, INPUT_PULLUP);
 
-  // Should use digitalPinToInterrupt, but it doesn't work.  Our only choice is to hardcode the interrupt vectors that are mapped to the pins
   attachInterrupt(21, isr_red_button, FALLING); //INT3 maps to PIN_RED_BUTTON
   attachInterrupt(20, isr_grn_button, FALLING); // 20 pin : SDA for mega
 
